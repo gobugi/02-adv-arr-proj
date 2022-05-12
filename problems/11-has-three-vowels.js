@@ -21,19 +21,24 @@ console.log(hasThreeVowels('go home'));         //  false
 
 const hasThreeVowels = str => {
     let newArr = str.split('');
+    let result = [];
 
     const vowels = 'aeiou';
 
-    let newVowels = '';
 
     newArr.forEach(char => {
-        if (vowels.includes(char.toLowerCase) && !newVowels.includes(char.toLowerCase())) {
-            newVowels += char;
+        console.log(char)
+        if (vowels.includes(char.toLowerCase())) {
+            result.push(char.toLowerCase())
         }
     })
 
-    return (newVowels.length > 2)
+    let set = new Set(result);
+    const finalArr = Array.from(set);
+
+    return (finalArr.length > 2)
 }
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
