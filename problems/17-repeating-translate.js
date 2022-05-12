@@ -30,6 +30,35 @@ console.log(repeatingTranslate("her family flew to France"));   // "herer family
 
 
 // your code here
+const vowelRepeat = word => {
+  const vowels = 'aeiou';
+
+  for (let i = word.length - 1; i > -1; i--) {
+    if (vowels.includes(word[i].toLowerCase())) {
+      return word + word.slice(i);
+    }
+  }
+  return word
+}
+
+
+
+const repeatingTranslate = sentence => {
+  const arr = sentence.split(' ');
+  const vowels = 'aeiou';
+
+  return arr.map(ele => {
+    if (ele.length < 3) {
+      return ele;
+    } else if (vowels.includes(ele[ele.length - 1].toLowerCase())) {
+      return ele + ele
+    } else {
+      return vowelRepeat(ele)
+    };
+
+
+  }).join(' ');
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

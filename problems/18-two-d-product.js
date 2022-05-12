@@ -28,6 +28,19 @@ console.log(twoDimensionalProduct(arr2)); // 88
 
 // your code here
 
+const twoDimensionalProduct = (array) => {
+  let result = 1;
+
+  array.forEach((ele) => {
+    for (let i = 0; i < ele.length; i++) {
+      result *= ele[i];
+    }
+  })
+  return result;
+}
+
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
