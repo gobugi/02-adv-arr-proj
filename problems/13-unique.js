@@ -16,6 +16,17 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 // your code here
 
+const unique = arr => {
+    const newArr = [];
+
+    arr.forEach(ele => {
+        if (!newArr.includes(ele)) {
+            newArr.push(ele)
+        }
+    })
+    return newArr;
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
